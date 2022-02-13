@@ -1,7 +1,8 @@
-# React + web3js Ethereum Metamask Payment dApp
+# React + web3js Ethereum Payment dApp
 
-React Typescript dApp that allows Ethereum payments through Metamask using web3.js
+React Typescript dApp that allows Ethereum transactions and payments through ethereum browser wallets (Metamask, Trust Wallet, Coinbase Wallet, etc) using web3.js
 
+Live version: https://eth-payment.gemanepa.com
 ## Available Scripts
 
 In the project directory, you can run:
