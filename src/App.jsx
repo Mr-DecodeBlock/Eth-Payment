@@ -35,7 +35,7 @@ export default function App() {
         const listAccs = await window.web3.eth.getAccounts();
         const balance = await window.web3.eth.getBalance(listAccs[0])
         const formattedBalance = await window.web3.utils.fromWei(balance);
-        setBalance(formattedBalance)
+        if(formattedBalance) setBalance(formattedBalance)
       } else {
         setError("No crypto wallet found. Please install it.");
       }
