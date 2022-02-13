@@ -101,7 +101,7 @@ export default function App() {
               handleBtnConnectSiteClick={handleBtnConnectSiteClick}
             />
             <ErrorMessage message={error} />
-            <TxList txs={txs} />
+            {siteConnected && <TxList txs={txs} />}
           </div>
         </main>
       </form>
