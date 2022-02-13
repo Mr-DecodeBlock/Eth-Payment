@@ -13,7 +13,7 @@ const startPayment = async ({ setError, handleNewTx, ether, addr }: StartPayment
       });
   
         const gasPrice = window.web3.utils.fromWei(tx.gasUsed.toString());
-        const value = Number(ether)
+        const value = ether
   
         handleNewTx({ hash: tx.transactionHash, gasPrice, value });
     } catch (err: any) {
@@ -28,6 +28,6 @@ type StartPayment = {
     addr: string;
 }
 
-type HandleNewTxt = { hash: string, gasPrice: number, value: number }
+type HandleNewTxt = { hash: string, gasPrice: string, value: string }
 
 export default startPayment;

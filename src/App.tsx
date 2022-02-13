@@ -20,9 +20,11 @@ export default function App() {
   const handleNewTx = (tx: Transaction) => {
     setTxs([...txs, tx]);
     setBalance(
-      (Number(balance) - tx.gasPrice - tx.value
-    ).toString());
+      // @ts-ignore
+      (Number(balance) - tx.gasPrice - tx.value).toString()
+    );
   };
+
   const handleSubmit = async (e: any) => {
     e.preventDefault();
     const data = new FormData(e.target);
@@ -104,7 +106,7 @@ export default function App() {
 }
 
 type Transaction = {
-  gasPrice: number;
-  value: number;
+  gasPrice: string;
+  value: string;
   hash: string;
 }
